@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar-brand {
+      color: #DDAA36 !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    #img1 {
+      background: linear-gradient(to bottom, #DDAA36, #F2DA9D);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .mainpic {
+      border-radius: 50%;
+      border: 5px solid black;
+      max-width: 300px;
+    }
+
+    .label h1, .label h2, .label p {
+      color: black;
+    }
+
+    .about, .skills, .prodmain, .contact {
+      background-color: #F2DA9D;
+      color: black;
+    }
+
+    .aboutimg {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+
+    .skill-icon {
+      height: 60px;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      border-radius: 10px;
+      border: 2px solid #DDAA36;
+    }
+
+    .contact-form input:focus, .contact-form textarea:focus {
+      box-shadow: 0 0 0 0.2rem rgba(221, 170, 54, 0.25);
+    }
+
+    .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  background-color: black;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-top: 0.25rem solid white;
+  border-right: 0.25rem solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel-control-next-icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.nav-link.active {
+  background-color: black !important;
+  color: #DDAA36 !important;
+  border-radius: 5px;
+}
+
+.contact {
+  background: linear-gradient(to bottom, #F2DA9D, #DDAA36); /* Fading from light gold to darker gold */
+  color: black;
+}
+
+.aboutimg {
+  max-width: 80%; /* Adjust this value to make the image smaller */
+  height: auto;
+  border-radius: 20px;
+}
+
+body {
+  background: radial-gradient(circle at top left, #1a1a1a, #0f0f0f 70%);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h2 {
+  text-shadow: 0 0 10px #DDAA36;
+}
+.aboutimg {
+  max-width: 70%; /* Decrease the size further */
+  height: auto;
+  border-radius: 20px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .mainpic {
+    max-width: 250px;
+  }
+
+  .aboutimg {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .mainpic {
+    max-width: 220px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .skills .row {
+    flex-direction: row;
+  }
+
+  .carousel-item img {
+    max-height: 350px;
+    object-fit: cover;
+  }
+
+  .contact-form {
+    padding: 3rem 2rem;
+  }
+
+  .contact-form input, .contact-form textarea {
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imgskills {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .imgskills > div {
+    flex: 0 0 auto;
+    width: auto;
+    text-align: center;
+  }
+
+  .skill-icon {
+    max-width: 80px;
+    height: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .skill-icon {
+    max-width: 70px;
+  }
+}
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar-example2" class="navbar navbar-expand-lg sticky-top bg-dark px-4 shadow">
+    <a class="navbar-brand" href="#">KEVIN</a>
+    <ul class="nav nav-pills ms-auto">
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#scrollspyHeading1">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#scrollspyHeading2">ABOUT ME</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#">OTHERS</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#scrollspyHeading3">EDUCATION</a></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading4">PROJECTS</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#scrollspyHeading5">CONTACT</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+
+    <!-- Hero Section -->
+    <section id="scrollspyHeading1">
+      <div id="img1" class="d-flex flex-column flex-md-row align-items-center justify-content-around">
+        <div class="label">
+          <h2 class="fw-bold">HI!</h2>
+          <h1 class="display-5 fw-bold">I'M KEN KEVIN T. CABANALAN</h1>
+          <p class="lead">FullStack Developer</p>
+        </div>
+        <img class="mainpic" src="https://i.imgur.com/4cuwMDf.jpeg" alt="Main Picture">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="scrollspyHeading2" class="about py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center">
+            <img src="https://i.imgur.com/TiuuXjP.png" alt="About Image" class="aboutimg">
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-warning mb-3">ABOUT ME</h2>
+            <p>Hello! I'm a dedicated FullStack Developer based in Caloocan City, Philippines. With a passion for Web Development and Graphic Design, I bring creativity, precision, and commitment to every project. When I'm not at school or working, I enjoy going to the gym and watching movies — which inspire my creation process. Let's collaborate to bring your vision to life!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="scrollspyHeading3" class="skills py-5 text-center">
+      <div class="container">
+        <h2 class="text-warning mb-4">SKILLS</h2>
+        <div class="imgskills row justify-content-center mb-4">
+          <div class="col-4 col-sm-2">
+            <img src="https://i.imgur.com/BqMtirq.png" class="skill-icon img-fluid" alt="Java">
+          </div>
+          <div class="col-4 col-sm-2">
+            <img src="https://i.imgur.com/MdaaOqM.png" class="skill-icon img-fluid" alt="C#">
+          </div>
+          <div class="col-4 col-sm-2">
+            <img src="https://i.imgur.com/WcufSEa.png" class="skill-icon img-fluid" alt="Python">
+          </div>
+          <div class="col-4 col-sm-2">
+            <img src="https://i.imgur.com/IP3NjPN.png" class="skill-icon img-fluid" alt="HTML">
+          </div>
+          <div class="col-4 col-sm-2">
+            <img src="https://i.imgur.com/7Qsc7ha.png" class="skill-icon img-fluid" alt="CSS">
+          </div>
+        </div>
+        <p class="px-3">I have developed skills in Java, C#, Python, and HTML/CSS. I have worked on several personal projects, including school assignments and independent ventures. I hold certificates in Python 1 and Python 2 Essentials from Cisco. Currently, I am a first-year student at Global Reciprocal Colleges. 
+          Though I am new to the freelancing industry, I am eager to learn and grow in this field. Additionally, I possess video editing skills, graphic design skills and the application I use in video editing is Capcut pro, and for graphic design I use Figma, Ibispaint, and Canva which complement my technical expertise.</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="scrollspyHeading4" class="prodmain py-5 text-center">
+      <div class="container">
+        <h2 class="text-warning mb-4">MY PROJECTS</h2>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner rounded shadow">
+            <div class="carousel-item active">
+              <a href="https://cosme0.github.io/calendar/?authuser=0">
+                <img src="https://i.imgur.com/UxBd9JE.png" class="d-block w-100" alt="Calendar Project">
+              </a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Calendar App</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <a href="https://cosme0.github.io/assignment-4-activity-4/?authuser=0">
+                <img src="https://i.imgur.com/TJzrrd6.png" class="d-block w-100" alt="Assignment Project">
+              </a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Flexbox Layout</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.imgur.com/Fy8cP5q.png" class="d-block w-100" alt="Project Image">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Additional Project</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="scrollspyHeading5" class="contact py-5 text-center">
+      <div class="container">
+        <h2 class="text-warning mb-4">CONTACT ME</h2>
+        <form 
+          action="https://formspree.io/f/xrbkpgpp" 
+          method="POST" 
+          class="contact-form bg-white text-dark p-4 rounded shadow mx-auto" 
+          style="max-width: 600px;"
+          novalidate
+        >
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input 
+              type="text" 
+              name="name" 
+              class="form-control" 
+              id="name" 
+              placeholder="Enter your name" 
+              required
+            >
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input 
+              type="email" 
+              name="email" 
+              class="form-control" 
+              id="email" 
+              placeholder="kenkevincabanalan0@email.com" 
+              required
+            >
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea 
+              name="message" 
+              class="form-control" 
+              id="message" 
+              rows="5" 
+              placeholder="Write your message..." 
+              required
+            ></textarea>
+          </div>
+
+          <!-- Disable Formspree CAPTCHA -->
+          <input type="hidden" name="_captcha" value="false">
+
+          <!-- Optional redirect after submission - update URL or remove if none -->
+          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+          <button type="submit" class="btn btn-dark rounded-pill px-4">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
